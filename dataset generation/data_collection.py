@@ -8,11 +8,12 @@ import seaborn as sns
 
 from scipy.stats import skew, kurtosis
 
-import util
+
+from eda import util
 
 import librosa
 
-AUDIO_DIR_PATH = './data/fma_small/'
+AUDIO_DIR_PATH = '../data/fma_small/'
 
 def columns():
     feature_sizes = dict(chroma_stft=12, chroma_cqt=12, chroma_cens=12,
