@@ -127,8 +127,8 @@ def feature_extract(filename):
 def main():
     mlp, X_train_copy = train_mlp()
 
-    filename = 'final_model.pkl'
-    pickle.dump(mlp, open(filename, 'wb'))
+    mlp_file = 'mlp_model.pkl'
+    pickle.dump(mlp, open(mlp_file, 'wb'))
 
     filename = "../feature extraction/files/1.mp3"
     #filename = "../feature extraction/files/2.mp3"
@@ -142,6 +142,9 @@ def main():
     sc = StandardScaler()
     sc.fit(X_train_copy)
     features = sc.transform(features)
+
+    sc_file = 'mlp_standard_scaler.pkl'
+    pickle.dump(mlp, open(sc_file, 'wb'))
 
     prediction = mlp.predict(features)
 
