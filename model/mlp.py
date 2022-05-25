@@ -141,10 +141,11 @@ def main():
 
     sc = StandardScaler()
     sc.fit(X_train_copy)
-    features = sc.transform(features)
-
+    
     sc_file = 'mlp_standard_scaler.pkl'
-    pickle.dump(mlp, open(sc_file, 'wb'))
+    pickle.dump(sc, open(sc_file, 'wb'))
+
+    features = sc.transform(features)
 
     prediction = mlp.predict(features)
 
