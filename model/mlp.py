@@ -17,6 +17,8 @@ sys.path.append('../')
 
 import utils
 
+import pickle
+
 def train_mlp():
     tracks = utils.load('../data/fma_metadata/tracks.csv')
     feats = utils.load('../data/fma_metadata/features.csv')
@@ -124,6 +126,9 @@ def feature_extract(filename):
 
 def main():
     mlp, X_train_copy = train_mlp()
+
+    filename = 'final_model.pkl'
+    pickle.dump(mlp, open(filename, 'wb'))
 
     filename = "../feature extraction/files/1.mp3"
     #filename = "../feature extraction/files/2.mp3"
