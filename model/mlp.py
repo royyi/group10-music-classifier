@@ -28,6 +28,16 @@ def train_mlp():
     X = feats.loc[small]
     y = tracks['track', 'genre_top'].loc[small]
 
+    #uncomment for 5-class or 2-class
+    y = y.loc[(y == 'Rock') | (y == 'Electronic') | (y == 'Instrumental') | (y == 'Hip-Hop') | (y == 'Pop')]
+    #y = y.loc[(y == 'Rock') | (y == 'Electronic')]
+
+    X = X.loc[X.index.isin(y.index)]
+
+    #uncomment for mfcc
+    #col = X.columns.get_loc('mfcc')
+    #X = X.iloc[:, col]
+
     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
 
     sc = StandardScaler()
@@ -127,8 +137,9 @@ def feature_extract(filename):
 def main():
     mlp, X_train_copy = train_mlp()
 
-    mlp_file = 'mlp_model.pkl'
-    pickle.dump(mlp, open(mlp_file, 'wb'))
+    # uncomment to create model pkl file
+    #mlp_file = 'mlp_model.pkl'
+    #pickle.dump(mlp, open(mlp_file, 'wb'))
 
     filename = "../feature extraction/files/1.mp3"
     #filename = "../feature extraction/files/2.mp3"
@@ -142,8 +153,9 @@ def main():
     sc = StandardScaler()
     sc.fit(X_train_copy)
     
-    sc_file = 'mlp_standard_scaler.pkl'
-    pickle.dump(sc, open(sc_file, 'wb'))
+    # uncomment to create sc pkl file
+    #sc_file = 'mlp_standard_scaler.pkl'
+    #pickle.dump(sc, open(sc_file, 'wb'))
 
     features = sc.transform(features)
 

@@ -88,8 +88,8 @@ def feature_extract(filename):
     return features
 
 def get_prediction(filename):
-    loaded_model = pickle.load(open('mlp_model.pkl', 'rb'))
-    loaded_sc = pickle.load(open('mlp_standard_scaler.pkl', 'rb'))
+    loaded_model = pickle.load(open('mlp_5_class_model.pkl', 'rb'))
+    loaded_sc = pickle.load(open('mlp_5_class_sc.pkl', 'rb'))
 
     features = feature_extract(filename)
     features = loaded_sc.transform(features)
