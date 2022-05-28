@@ -88,15 +88,19 @@ def feature_extract(filename):
     return features
 
 def get_prediction(filename):
-    loaded_model = pickle.load(open('mlp_5_class_model.pkl', 'rb'))
-    loaded_sc = pickle.load(open('mlp_5_class_sc.pkl', 'rb'))
+    loaded_model = pickle.load(open('./pkl files/mlp_5_class_model.pkl', 'rb'))
+    loaded_sc = pickle.load(open('./pkl files/mlp_5_class_sc.pkl', 'rb'))
 
     features = feature_extract(filename)
     features = loaded_sc.transform(features)
 
-    prediction = loaded_model.predict(features)
-    print(prediction)
+    prediction = loaded_model.predict_proba(features)
+    results = {}
+    for i in range(len(prediction[0])):
+        results[loaded_model.classes_[i]] = float(prediction[0][i])
+    return results
 
-    
 
-get_prediction("../feature extraction/files/1.mp3")
+### to test print results only
+results = get_prediction("../feature extraction/files/1.mp3")
+print(results)
