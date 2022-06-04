@@ -1,5 +1,7 @@
 /data/*
 
+dependencies/fma_metadata
+
 **/.DS_Store
 
 # Byte-compiled / optimized / DLL files
