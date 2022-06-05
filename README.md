@@ -5,7 +5,7 @@
 We have 4 folders: 
 - `dependencies` contains `utils.py`, which comes from https://github.com/mdeff/fma
 - `model` contains all codes related to eda and models
-- `web-app` contains all codes needed for lauching the web app
+- `web_app` contains all codes needed for lauching the web app
 - `more_files` contains some unused files
 
 ## Lauch app with local flask backend
