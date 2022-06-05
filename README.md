@@ -1,11 +1,10 @@
 # Group 10 - Music Classifier
 ## Repo Summary
 
-
 We have 4 folders: 
-- `dependencies` contains `utils.py`, which comes from https://github.com/mdeff/fma
-- `model` contains all codes related to eda and models
+- `model` contains all core codes related to eda and models
 - `web_app` contains all codes needed for lauching the web app
+- `dependencies` contains [`utils.py`](https://github.com/mdeff/fma/blob/master/utils.py) for loading data
 - `more_files` contains some unused files
 
 ## Lauch web app with local flask backend
