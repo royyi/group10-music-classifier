@@ -2,7 +2,7 @@
 ## Repo Summary
 
 
-We have three folders: 
+We have 4 folders: 
 - `dependencies` contains `utils.py`, which comes from https://github.com/mdeff/fma
 - `model` contains all codes related to eda and models
 - `web-app` contains all codes needed for lauching the web app
