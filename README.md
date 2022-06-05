@@ -7,7 +7,7 @@ We have 4 folders:
   - You can get these two `.csv` files from [fma_metadata.zip](https://os.unil.cloud.switch.ch/fma/fma_metadata.zip). We don't have them in repo because the filesize is too large.
 - `web_app` contains all codes needed for lauching the web app. See [instructions](https://github.com/royyi/group10-music-classifier#lauch-web-app-with-local-flask-backend) below for lauching the app.
 - `dependencies` contains [`utils.py`](https://github.com/mdeff/fma/blob/master/utils.py) for loading data
-- `more_files` contains some unused files
+- `more_files` contains others files used during the development of the ML models during the project
 
 ## Lauch web app with local flask backend
 ### Set up flask backend
