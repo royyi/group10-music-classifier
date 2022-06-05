@@ -9,7 +9,7 @@ We have 4 folders:
 - `dependencies` contains [`utils.py`](https://github.com/mdeff/fma/blob/master/utils.py) for loading data
 - `more_files` contains other files used during model development
 
-## Lauch web app with local flask backend
+## Launch web app with local flask backend
 ### Set up flask backend
 #### Do the following steps if you don't have flask installed
 1. `cd web_app` to enter `web_app` folder
@@ -17,7 +17,7 @@ We have 4 folders:
 3. Run `pip install flask` if you haven't installed flask
 4. Run `flask run` and check if endpoints are up in http://localhost:5000/
 
-### Lauch app
+### Launch app
 1. Run `cd frontend` to enter frontend code folder
 2. Run `npm install`
 3. Run `npm start`
