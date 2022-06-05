@@ -1,4 +1,13 @@
-/data/*
+/data/fma_small/
+/data/fma_metadata/*
+# !/data/fma_metadata/features.csv
+# !/data/fma_metadata/tracks.csv
+# !/data/fma_metadata/README.txt
+
+
+dependencies/fma_metadata
+
+**/.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
