@@ -4,10 +4,10 @@
 We have 4 folders: 
 - `model` contains all core codes related to eda and models
   - To run the codes, you need to create a `data/fma_metadata` in current repo and have `tracks.csv` and `features.csv` ready in it
-  - You can get these two `.csv` files from [fma_metadata.zip](https://os.unil.cloud.switch.ch/fma/fma_metadata.zip). We don't have them in repo because the filesize is too large.
+  - You can get these two `.csv` files from [fma_metadata.zip](https://os.unil.cloud.switch.ch/fma/fma_metadata.zip). We don't have them in repo because the file size is too large.
 - `web_app` contains all codes needed for lauching the web app. See [instructions](https://github.com/royyi/group10-music-classifier#lauch-web-app-with-local-flask-backend) below for lauching the app.
 - `dependencies` contains [`utils.py`](https://github.com/mdeff/fma/blob/master/utils.py) for loading data
-- `more_files` contains others files used during the development of the ML models during the project
+- `more_files` contains other files used during model development
 
 ## Lauch web app with local flask backend
 ### Set up flask backend
