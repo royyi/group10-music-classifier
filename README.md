@@ -8,15 +8,13 @@ We have 4 folders:
 - `web_app` contains all codes needed for lauching the web app
 - `more_files` contains some unused files
 
-## Lauch app with local flask backend
+## Lauch web app with local flask backend
 ### Set up flask backend
 #### Do the following steps if you don't have flask installed
-1. cd into the "flask-music-classifier" directory on your computer
-2. Create py venv
-3. `pip install flask`
-
-#### Run `flask run` if already have flask installed
-Check if endpoints are up in http://localhost:5000/
+1. `cd web_app` to enter `web_app` folder
+2. Optional: Create py venv
+3. Run `pip install flask` if you haven't installed flask
+4. Run `flask run` and check if endpoints are up in http://localhost:5000/
 
 ### Lauch app
 1. Run `cd frontend` to enter frontend code folder
@@ -31,5 +29,3 @@ It can take a while or a short
 time to classify songs. If it takes longer
 that a minute to classify, restart the python and
 react programs and try again.
-
-Compatible file format (.wav)
